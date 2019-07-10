@@ -22,7 +22,7 @@ cred_PATH = 'http://localhost:5002/credentials'
 
 ISSUER = 'sample-auth-server'
 
-with open('public.pem', 'rb') as f:
+with open('/OAuth_Vuln/API_server/public.pem', 'rb') as f:
   public_key = f.read()
 
 

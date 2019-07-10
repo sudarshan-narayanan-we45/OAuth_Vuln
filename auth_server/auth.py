@@ -23,7 +23,7 @@ authorization_codes = {}
 
 f = Fernet(KEY)
 
-with open('private.pem', 'rb') as file:
+with open('/OAuth_Vuln/auth_server/private.pem', 'rb') as file:
   private_key = file.read()
 
 def authenticate_user_credentials(username, password):

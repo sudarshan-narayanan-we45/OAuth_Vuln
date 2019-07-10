@@ -3,7 +3,7 @@ import jwt
 
 ISSUER = 'sample-auth-server'
 
-with open('public.pem', 'rb') as f:
+with open('/OAuth_Vuln/API_server/public.pem', 'rb') as f:
   public_key = f.read()
 
 def verify_access_token(access_token):
