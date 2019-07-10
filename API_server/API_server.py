@@ -14,7 +14,7 @@ import base64
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'pavankumar'
 
-client = MongoClient('127.0.0.1:27017')
+client = MongoClient('db_mongo:27017')
 db = client.OAuth
 
 

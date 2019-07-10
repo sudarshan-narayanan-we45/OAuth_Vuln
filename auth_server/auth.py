@@ -16,7 +16,7 @@ ISSUER = 'sample-auth-server'
 CODE_LIFE_SPAN = 600
 JWT_LIFE_SPAN = 1800
 
-client = MongoClient('127.0.0.1:27017')
+client = MongoClient('db_mongo:27017')
 db = client.OAuth
 
 authorization_codes = {}
