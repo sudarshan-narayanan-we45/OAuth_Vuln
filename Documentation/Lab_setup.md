@@ -6,6 +6,9 @@
 * Python 3
 * MongoDB
 
+## Lab Instructions
+The following instructions should help you in setting up the following components to run the exercises pertaining to OAuth2 vulnerabilities and learn how to exploit them.
+
 ### Step 1: 
 > Run the MongoDB service from system or docker hub
 
