@@ -3,7 +3,7 @@ RUN apk update && apk add wget git gcc musl-dev python3-dev libffi-dev openssl-d
 RUN git clone https://github.com/sudarshan-narayanan-we45/OAuth_Vuln.git
 WORKDIR /OAuth_Vuln
 RUN pip install -r requirements.txt
-CMD [ "/bin/sh", "start_app.sh" ]
+ENTRYPOINT ["/OAuth_Vuln/start_app.sh"]
 
 #####Command to run the Vulnerable OAuth Flask App
 #Sudarshans-MacBook-Air:OAuth_Lab sudarshannarayanan$ docker run -it --link db_mongo:db_mongo -p 5000:5000 -p 5001:5001 -p 5002:5002 oauth_vuln_app /bin/sh
