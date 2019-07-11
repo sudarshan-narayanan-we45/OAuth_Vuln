@@ -5,7 +5,7 @@ WORKDIR /OAuth_Vuln
 RUN pip install -r requirements.txt
 # RUN /bin/sh start_app.sh
 ENTRYPOINT ["/bin/sh"]
-CMD ["start_app.sh]
+CMD ["start_app.sh"]
 
 #####Command to run the Vulnerable OAuth Flask App
 #Sudarshans-MacBook-Air:OAuth_Lab sudarshannarayanan$ docker run -it --link db_mongo:db_mongo -p 5000:5000 -p 5001:5001 -p 5002:5002 oauth_vuln_app /bin/sh
