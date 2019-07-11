@@ -3,9 +3,6 @@ RUN apk update && apk add wget git gcc musl-dev python3-dev libffi-dev openssl-d
 RUN git clone https://github.com/sudarshan-narayanan-we45/OAuth_Vuln.git
 WORKDIR /OAuth_Vuln
 RUN pip install -r requirements.txt
-RUN python API_server/API_server.py & 
-RUN python auth_server/AC_auth_server.py & 
-RUN python client/AC_client.py & 
 CMD /bin/sh
 
 #####Command to run the Vulnerable OAuth Flask App
