@@ -93,4 +93,3 @@ Image
 
 * Stealing Users OAUTH Tokens via redirect_uri
 * Authorization code not invalidated
-* Race Conditions in OAuth 2 API implementations
