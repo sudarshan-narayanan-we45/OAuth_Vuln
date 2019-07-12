@@ -1,11 +1,12 @@
 FROM python:3.7.4-alpine3.9 
-RUN apk update && apk add wget git gcc musl-dev python3-dev libffi-dev openssl-dev vim
+RUN apk update && apk add wget git gcc musl-dev python3-dev libffi-dev openssl-dev vim supervisor
 RUN git clone https://github.com/sudarshan-narayanan-we45/OAuth_Vuln.git
 WORKDIR /OAuth_Vuln
+ADD supervisord.conf /etc/supervisord.conf
 RUN pip install -r requirements.txt
 # RUN /bin/sh start_app.sh
-ENTRYPOINT ["/bin/sh start_app.sh && python"]
-CMD ["/OAuth_Vuln/client/AC_client.py"]
+ENTRYPOINT ["supervisord", "--nodaemon", "--configuration", "/etc/supervisord.conf"]
+
 
 #####Command to run the Vulnerable OAuth Flask App
 #Sudarshans-MacBook-Air:OAuth_Lab sudarshannarayanan$ docker run -it --link db_mongo:db_mongo -p 5000:5000 -p 5001:5001 -p 5002:5002 oauth_vuln_app /bin/sh
